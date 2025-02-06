@@ -16,7 +16,7 @@ class Definitions {
         if (req.method === "POST")
             return this.handlePost(req, res)
         if (req.method === "OPTIONS")
-            return this.sendResponse
+            return this.sendResponse(res, 200, '')
     }
 
     handleGet = (req, res) => {
@@ -67,8 +67,8 @@ class Definitions {
     sendResponse = (res, status, message) => {
         res.writeHead(status, { 
             'access-control-allow-methods': 'GET, POST, OPTIONS',
-            'content-type': "application/json",
-            'access-control-allow-origin': '*'
+            'Access-Control-Allow-Origin': '*',
+            'content-type': "application/json"
         })
         res.write(message)
         res.end()
