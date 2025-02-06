@@ -21,7 +21,8 @@ class WordSearch {
         }
 
         try {
-            let response = await fetch("/api/search-word?word=${word}");
+            const endpoint = `https://whale-app-aoaek.ondigitalocean.app/comp4537lab4-server-2-back-end/api/definitions?word=${word}`;
+            let response = await fetch(endpoint);
 
             let result = await response.json();
             if (response.ok) {
@@ -39,6 +40,13 @@ class WordSearch {
         }
     }
 
+    updateFeedback(message, color) {
+      if (this.feedback) {
+        this.feedback.innerText = message;
+        this.feedback.style.color = color;
+      }
+    }
+    
     updateResponseText(word, definition) {
         const responseText = document.getElementById("response");
         responseText.innerText = `${word}: ${definition}`;
