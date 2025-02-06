@@ -6,7 +6,7 @@ class Definitions {
     constructor() {
         this.dictionary = []
         this.reqCount = 0
-        this.messages = JSON.parse(fs.readFileSync('./Server2BackEnd/lang/en/messages.json'))
+        this.messages = JSON.parse(fs.readFileSync('./lang/en/messages.json'))
     }
 
     handleRequest = (req, res) => {

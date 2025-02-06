@@ -7,7 +7,7 @@ class Server {
 
     constructor() {
         this.definitions = new Definitions();
-        const messages = JSON.parse(fs.readFileSync('./Server2BackEnd/lang/en/messages.json'))
+        const messages = JSON.parse(fs.readFileSync('./lang/en/messages.json'))
         this.notFound = messages.notFound
         this.routes = [
             {pathRegex: /^\/api\/definitions\/?$/, action: this.definitions.handleRequest}
@@ -24,7 +24,7 @@ class Server {
             }
             res.writeHead(404, { 'content-type': 'text/html' })
             res.end(this.notFound)
-        }).listen(8088)
+        }).listen(8089)
         
         console.log('Server listening...')
     }
