@@ -33,7 +33,7 @@ class Definitions {
         }
 
         response.word = word
-        response.defintion = dictEntry.definition
+        response.definition = dictEntry.definition
         return this.sendResponse(res, 200, JSON.stringify(response))
     }
 
