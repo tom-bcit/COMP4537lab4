@@ -6,16 +6,17 @@
     <title>Word Store</title>
 </head>
 <body>
-    <h2>Search for a Word and Its Definition</h2>
-    <form action="" method="get">
-        <label for="word">Word:</label>
+    <h2 id="heading"></h2>
+    <form id="wordForm">
+        <label for="word" id="wordLabel"></label>
         <input type="text" id="word" name="word" required>
         <br><br>
-        <label for="response">Response:</label>
-        <textarea id="response" name="response" rows="4" cols="50"></textarea>
+        <button type="submit" id="submit"></button>
         <br><br>
-        <button type="submit">Submit</button>
+        <label for="response" id="responseLabel"></label>
+        <textarea id="response" name="response" rows="4" cols="50" readonly></textarea>
+        <p id="submissionFeedback"></p>
     </form>
-    <script src="./js/search.js"></script>
+    <script type="module" src="./js/search.js"></script>
 </body>
 </html>
