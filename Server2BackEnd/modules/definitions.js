@@ -66,7 +66,10 @@ class Definitions {
     }
 
     sendResponse = (res, status, message) => {
-        res.writeHead(status, { 'content-type': "application/json" })
+        res.writeHead(status, { 
+            'content-type': "application/json",
+            'access-control-allow-origin': '*'
+        })
         res.write(message)
         res.end()
     }
