@@ -23,7 +23,7 @@ class Definitions {
         const word = params.get('word')
         const dictEntry = this.searchDictionary(word)
         const response = {}
-        response.reqestNumber = this.reqCount
+        response.requestNumber = this.reqCount
 
         if (dictEntry === null) {
             response.error = this.messages.wordNotFound.replace("%1", word)
