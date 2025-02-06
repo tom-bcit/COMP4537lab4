@@ -1,4 +1,4 @@
-modules.exports = {
+export const messages = {
     "headingStore": "Store a Word and Its Definition",
     "headingSearch": "Search for a Word and Its Definition",
     "wordLabel": "Word:",

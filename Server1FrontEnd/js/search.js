@@ -1,4 +1,4 @@
-const messages = require('./messages');
+import { messages } from '../lang/en/messages.js';
 
 class WordSearch {
     constructor(formId, feedbackId) {
@@ -43,18 +43,18 @@ class WordSearch {
         const responseText = document.getElementById("response");
         responseText.innerText = `${word}: ${definition}`;
     }
-
-    updateUserStrings() {
-        if (this.form) {
-            document.getElementById("wordLabel").innerText = messages.wordLabel;
-            document.getElementById("responseLabel").innerText = messages.responseLabel;
-            document.getElementById("submit").innerText = messages.submit;
-            document.getElementById("heading").innerText = messages.headingSearch;
-        }
-    }
+}
+class Ui {
+  static updateUserStrings() {
+    document.getElementById("wordLabel").innerText = messages.wordLabel;
+    document.getElementById("responseLabel").innerText = messages.responseLabel;
+    document.getElementById("submit").innerText = messages.submit;
+    document.getElementById("heading").innerText = messages.headingStore;
+  }
 }
 
 // Initialize the WordStore class when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
     new WordSearch("wordForm", "submissionFeedback");
 });
+Ui.updateUserStrings();
