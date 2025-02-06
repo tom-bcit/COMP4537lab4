@@ -22,7 +22,7 @@ class WordStore {
     }
 
     try {
-      let response = await fetch("/api/store-word", {
+      let response = await fetch("https://whale-app-aoaek.ondigitalocean.app/comp4537lab4-server-2-back-end/api/definitions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
