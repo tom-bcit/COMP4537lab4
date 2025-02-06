@@ -48,6 +48,15 @@ class WordStore {
             this.feedback.style.color = color;
         }
     }
+
+    updateUserStrings() {
+        if (this.form) {
+            document.getElementById("wordLabel").innerText = messages.wordLabel;
+            document.getElementById("definitionLabel").innerText = messages.definitionLabel;
+            document.getElementById("submit").innerText = messages.submit;
+            document.getElementById("heading").innerText = messages.headingStore;
+        }
+    }
 }
 
 // Initialize the WordStore class when DOM is loaded
