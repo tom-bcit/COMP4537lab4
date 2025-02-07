@@ -15,7 +15,7 @@ class WordStore {
 
     let word = document.getElementById("word").value.trim();
     let definition = document.getElementById("definition").value.trim();
-    const isValid = /^[A-Za-z]+$/.test(inputValue);
+    const isValid = /^[A-Za-z]+$/.test(word);
 
     if (!isValid) {
       this.updateFeedback(messages.invalidInput, "red");

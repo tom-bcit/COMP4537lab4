@@ -14,7 +14,7 @@ class WordSearch {
     event.preventDefault();
 
     let word = document.getElementById("word").value.trim();
-    const isValid = /^[A-Za-z]+$/.test(inputValue);
+    const isValid = /^[A-Za-z]+$/.test(word);
 
     if (!isValid) {
       this.updateFeedback(messages.invalidInput, "red");
