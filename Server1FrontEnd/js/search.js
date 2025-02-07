@@ -30,10 +30,11 @@ class WordSearch {
               const definition = result.definition;
               const requestNumber = result.requestNumber;
               this.updateResponseText(word, definition);
+              this.updateFeedback("", "green");
             } else {
                 const requestNumber = result.requestNumber;
                 const error = result.error;
-                this.updateFeedback(error, "red");
+                this.updateFeedback(`${messages.requestNumber}${requestNumber}\n${error}`, "red");
             }
         } catch (error) {
             this.updateFeedback(messages.feedbackSearch, "red");
