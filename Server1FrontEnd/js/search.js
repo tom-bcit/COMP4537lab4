@@ -64,7 +64,7 @@ class Ui {
     document.getElementById("wordLabel").innerText = messages.wordLabel;
     document.getElementById("responseLabel").innerText = messages.responseLabel;
     document.getElementById("submit").innerText = messages.submit;
-    document.getElementById("heading").innerText = messages.headingStore;
+    document.getElementById("heading").innerText = messages.headingSearch;
   }
 }
 
