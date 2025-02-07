@@ -15,9 +15,15 @@ class WordStore {
 
     let word = document.getElementById("word").value.trim();
     let definition = document.getElementById("definition").value.trim();
+    const isValid = /^[A-Za-z]+$/.test(inputValue);
+
+    if (!isValid) {
+      this.updateFeedback(messages.invalidInput, "red");
+      return;
+    }
 
     if (!word || !definition) {
-      alert("Please fill in both fields.");
+      this.updateFeedback(messages.emptyField, "red");
       return;
     }
 

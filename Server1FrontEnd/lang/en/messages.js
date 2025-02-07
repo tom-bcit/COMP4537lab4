@@ -9,4 +9,6 @@ export const messages = {
     "feedbackFailure": "Failed to store the word. Try again.",
     "feedbackSearch": "Failed to find the word. Try again.",
     "requestNumber": "Request Number: ",
+    "invalidInput": "Please fill in word value with only letters.",
+    "emptyField": "Please fill in field(s)."
 };
