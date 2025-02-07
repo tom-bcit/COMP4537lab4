@@ -38,7 +38,7 @@ class WordStore {
 
       let result = await response.json();
       if (response.ok) {
-        this.updateFeedback(messages.feedbackSuccess, "green");
+        this.updateFeedback(`${messages.requestNumber}${requestNumber}\n${messages.feedbackSuccess}`, "green");
         this.form.reset();
       } else {
         this.updateFeedback(messages.feedbackFailure, "red");
