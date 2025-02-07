@@ -38,6 +38,7 @@ class WordStore {
 
       let result = await response.json();
       if (response.ok) {
+        const requestNumber = result.requestNumber;
         this.updateFeedback(`${messages.requestNumber}${requestNumber}\n${messages.feedbackSuccess}`, "green");
         this.form.reset();
       } else {
