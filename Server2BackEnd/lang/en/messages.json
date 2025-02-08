@@ -3,5 +3,6 @@
     "wordNotFound": "Word '%1' not found",
     "missingDefinition": "Word or definition is missing",
     "wordAdded": "Word '%1' added to dictionary",
-    "wordAlreadyExists": "Word '%1' already in dictionary"
+    "wordAlreadyExists": "Word '%1' already in dictionary",
+    "serverError": "Server error: "
 }
