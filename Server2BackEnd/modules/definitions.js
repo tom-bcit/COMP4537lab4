@@ -24,9 +24,15 @@ class Definitions {
             const urlParts = url.parse(req.url)
             const params = new URLSearchParams(urlParts.query)
             const word = params.get('word')
-            const dictEntry = this.searchDictionary(word)
             const response = {}
             response.requestNumber = this.reqCount
+
+            if (word === null) {
+                response.error = this.messages.missingWord
+                return this.sendResponse(res, 404, JSON.stringify(response))
+            }
+
+            const dictEntry = this.searchDictionary(word)
 
             if (dictEntry === null) {
                 response.error = this.messages.wordNotFound.replace("%1", word)

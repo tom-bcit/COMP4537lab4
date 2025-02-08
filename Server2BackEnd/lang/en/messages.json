@@ -1,6 +1,7 @@
 {
     "notFound": "404: Not Found!",
     "wordNotFound": "Word '%1' not found",
+    "missingWord": "GET requests must include a query for 'word'!",
     "missingDefinition": "Word or definition is missing",
     "wordAdded": "Word '%1' added to dictionary",
     "wordAlreadyExists": "Word '%1' already in dictionary",
